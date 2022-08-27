@@ -1,6 +1,0 @@
-{
-    "files.associations": {
-        "*.sq": "cpp",
-        "*.tcc": "cpp"
-    }
-}
