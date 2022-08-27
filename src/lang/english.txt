@@ -3514,6 +3514,9 @@ STR_TRACE_RESTRICT_ERROR_COUNTER_CAN_T_DELETE                   :{WHITE}Can't de
 STR_TRACE_RESTRICT_ERROR_COUNTER_CAN_T_RENAME                   :{WHITE}Can't rename counter...
 STR_TRACE_RESTRICT_ERROR_COUNTER_CAN_T_MODIFY                   :{WHITE}Can't modify this counter...
 
+STR_TRACE_RESTRICT_CLEAR_SLOT                                   :Clear slot
+STR_TRACE_RESTRICT_CLEAR_SLOT_TOOLTIP                           :Clear slot
+
 # Programmable Pre-Signals
 STR_PROGRAM_SIGNAL_TOOLTIP                                      :{BLACK}Program pre-signal
 

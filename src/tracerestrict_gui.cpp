@@ -3420,6 +3420,7 @@ enum TraceRestrictSlotWindowWidgets {
 	WID_TRSL_FILTER_BY_CARGO,
 	WID_TRSL_FILTER_BY_CARGO_SEL,
 	WID_TRSL_LIST_VEHICLE_SCROLLBAR,
+	WID_TRSL_CLEAR_SLOT,
 };
 
 
@@ -3469,7 +3470,9 @@ static const NWidgetPart _nested_slot_widgets[] = {
 			EndContainer(),
 			NWidget(WWT_PANEL, COLOUR_GREY), SetMinimalSize(1, 0), SetFill(1, 1), SetResize(1, 0), EndContainer(),
 			NWidget(NWID_HORIZONTAL),
-				NWidget(WWT_PANEL, COLOUR_GREY), SetFill(1, 1), EndContainer(),
+				NWidget(WWT_PANEL, COLOUR_GREY), SetMinimalSize(0, 12), SetFill(1, 0), SetResize(1, 0), EndContainer(),
+				NWidget(WWT_PUSHTXTBTN, COLOUR_GREY, WID_TRSL_CLEAR_SLOT), SetMinimalSize(106, 12),
+					SetDataTip(STR_TRACE_RESTRICT_CLEAR_SLOT, STR_TRACE_RESTRICT_CLEAR_SLOT_TOOLTIP),
 				NWidget(WWT_RESIZEBOX, COLOUR_GREY),
 			EndContainer(),
 		EndContainer(),
@@ -3874,6 +3877,10 @@ public:
 
 			case WID_TRSL_SET_SLOT_MAX_OCCUPANCY: // Set max occupancy of the selected slot
 				this->ShowSetSlotMaxOccupancyWindow(this->vli.index);
+				break;
+
+			case WID_TRSL_CLEAR_SLOT:
+				DEBUG(misc, 0, "Clear slot button pressed!");
 				break;
 		}
 	}
